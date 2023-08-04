@@ -56,7 +56,7 @@ class Elementor_Relationship_Blocks_Widget extends \Elementor\Widget_Base {
             $title = get_the_title($relationship -> ID); ?>
             <div>
             <figure>
-                <?php echo get_the_post_thumbnail($post = $relationship -> ID, $size = [1024,1024]); ?>
+                <?php echo get_the_post_thumbnail($post = $relationship -> ID, $size = [270,270]); ?>
                 <figcaption><a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a></figcaption>
             </figure>
             </div>
