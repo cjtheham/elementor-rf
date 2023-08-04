@@ -50,15 +50,19 @@ class Elementor_Relationship_Blocks_Widget extends \Elementor\Widget_Base {
 		$relationships = get_field($settings['title_field']);
         if($relationships): ?>
    
+        <div class="attorney-container">
             <?php foreach($relationships as $relationship):
             $permalink = get_permalink($relationship -> ID);
             $title = get_the_title($relationship -> ID); ?>
+            <div>
             <figure>
                 <?php echo get_the_post_thumbnail($post = $relationship -> ID, $size = [1024,1024]); ?>
                 <figcaption><?php echo esc_html($title); ?>
             </figure>
-            <?php endforeach; ?>
-
+            </div>
+            <?php endforeach; ?>        
+        </div>
+        
         <?php endif; ?>
 		
 
