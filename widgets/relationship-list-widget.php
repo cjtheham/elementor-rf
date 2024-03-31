@@ -54,9 +54,7 @@ class Elementor_Relationship_List_Widget extends \Elementor\Widget_Base {
             <?php foreach($relationships as $relationship):
             $permalink = get_permalink($relationship -> ID);
             $title = get_the_title($relationship -> ID); ?>
-            <li>
-                <a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
-            </li>
+            <li><a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a></li>
             <?php endforeach; ?>
         </ul>
 
